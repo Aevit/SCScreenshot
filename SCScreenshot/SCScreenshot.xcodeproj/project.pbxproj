@@ -32,6 +32,7 @@
 		E16E7E721BA9A37A0097B853 /* SSImageBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E7E711BA9A37A0097B853 /* SSImageBrowser.swift */; };
 		E16E7E761BA9B3C40097B853 /* SSListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E7E751BA9B3C40097B853 /* SSListViewController.swift */; };
 		E16E7E791BA9B5340097B853 /* SSPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E7E781BA9B5340097B853 /* SSPhotoCell.swift */; };
+		E16E7EA41BA9E3DE0097B853 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15359E41B84225300F5C866 /* Images.xcassets */; };
 		E1782E5B1BA88B5100CF8B15 /* SCImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1782E3C1BA88B5100CF8B15 /* SCImageBrowser.m */; };
 		E1782E5C1BA88B5100CF8B15 /* SCTapImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1782E3F1BA88B5100CF8B15 /* SCTapImageView.m */; };
 		E1782E5D1BA88B5100CF8B15 /* SCZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1782E411BA88B5100CF8B15 /* SCZoomingScrollView.m */; };
@@ -604,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1535A0B1B8422F900F5C866 /* MainInterface.storyboard in Resources */,
+				E16E7EA41BA9E3DE0097B853 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,6 +817,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SCScreenshot/SCScreenshot.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -836,6 +839,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SCScreenshot/SCScreenshot.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -889,6 +893,8 @@
 		E1535A101B8422F900F5C866 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SCScreenshotExtension/SCScreenshotExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -908,6 +914,8 @@
 		E1535A111B8422F900F5C866 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SCScreenshotExtension/SCScreenshotExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
