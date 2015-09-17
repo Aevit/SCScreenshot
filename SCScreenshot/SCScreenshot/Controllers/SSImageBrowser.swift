@@ -35,10 +35,10 @@ class SSImageBrowser: SCImageBrowser {
     
     func deleteBtnPressed(sender: UIBarButtonItem) {
         
-        if let ssCollection = screenshotCollection {
+        if let _ = screenshotCollection {
             PHPhotoLibrary.sharedPhotoLibrary().performChanges({ () -> Void in
                 let request = PHAssetCollectionChangeRequest(forAssetCollection: self.screenshotCollection)
-                request.removeAssets([self.screenshotAsset])
+                request!.removeAssets([self.screenshotAsset])
             }, completionHandler: { (success, error) -> Void in
                 if (success) {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in

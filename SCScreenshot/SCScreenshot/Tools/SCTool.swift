@@ -12,7 +12,7 @@ public class SCTool: NSObject {
     public class func log(message: String, function: String = __FUNCTION__) {
         #if DEBUG
 //            print("\(function): \(message)", appendNewline: true)
-            println("\(function): \(message)\n")
+            print("\(function): \(message)\n")
         #endif
     }
     
@@ -22,7 +22,7 @@ public class SCTool: NSObject {
         let rect: CGRect = CGRectMake(0, 0, size.width, size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, 1.0)
         color.setFill()
-        UIRectFillUsingBlendMode(rect, kCGBlendModeNormal)
+        UIRectFillUsingBlendMode(rect, CGBlendMode.Normal)
         return UIGraphicsGetImageFromCurrentImageContext()
     }
     

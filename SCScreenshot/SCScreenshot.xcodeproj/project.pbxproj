@@ -37,7 +37,6 @@
 		E1782E5C1BA88B5100CF8B15 /* SCTapImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1782E3F1BA88B5100CF8B15 /* SCTapImageView.m */; };
 		E1782E5D1BA88B5100CF8B15 /* SCZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1782E411BA88B5100CF8B15 /* SCZoomingScrollView.m */; };
 		E1782E6E1BA88B5100CF8B15 /* SCImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E1782E5A1BA88B5100CF8B15 /* SCImageTools.m */; };
-		E1782E8C1BA88E5600CF8B15 /* SSImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1782E8B1BA88E5600CF8B15 /* SSImagePickerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,7 +145,6 @@
 		E1782E411BA88B5100CF8B15 /* SCZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCZoomingScrollView.m; sourceTree = "<group>"; };
 		E1782E591BA88B5100CF8B15 /* SCImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCImageTools.h; sourceTree = "<group>"; };
 		E1782E5A1BA88B5100CF8B15 /* SCImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCImageTools.m; sourceTree = "<group>"; };
-		E1782E8B1BA88E5600CF8B15 /* SSImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SSImagePickerController.swift; path = Controllers/SSImagePickerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,7 +302,6 @@
 			isa = PBXGroup;
 			children = (
 				E1623EF51B94064E0077C413 /* ScreenshotManager.swift */,
-				E1782E8B1BA88E5600CF8B15 /* SSImagePickerController.swift */,
 				E16E7E751BA9B3C40097B853 /* SSListViewController.swift */,
 				E16E7E711BA9A37A0097B853 /* SSImageBrowser.swift */,
 			);
@@ -522,7 +519,9 @@
 		E15359CD1B84225300F5C866 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Aevit;
 				TargetAttributes = {
 					E15359D41B84225300F5C866 = {
@@ -637,7 +636,6 @@
 				E16E7E721BA9A37A0097B853 /* SSImageBrowser.swift in Sources */,
 				E1782E5D1BA88B5100CF8B15 /* SCZoomingScrollView.m in Sources */,
 				E1535A1C1B8481B800F5C866 /* SCBaseViewController.swift in Sources */,
-				E1782E8C1BA88E5600CF8B15 /* SSImagePickerController.swift in Sources */,
 				E15359DB1B84225300F5C866 /* AppDelegate.swift in Sources */,
 				E16E7E791BA9B5340097B853 /* SSPhotoCell.swift in Sources */,
 				E1782E6E1BA88B5100CF8B15 /* SCImageTools.m in Sources */,
@@ -751,6 +749,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -829,6 +828,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.aevit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$PROJECT_DIR/SCScreenshot/SCScreenshot-Bridging-Header.h";
@@ -850,6 +850,7 @@
 				INFOPLIST_FILE = SCScreenshot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.aevit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$PROJECT_DIR/SCScreenshot/SCScreenshot-Bridging-Header.h";
@@ -870,6 +871,7 @@
 				);
 				INFOPLIST_FILE = SCScreenshotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.aevit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCScreenshot.app/SCScreenshot";
 			};
@@ -885,6 +887,7 @@
 				);
 				INFOPLIST_FILE = SCScreenshotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.aevit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCScreenshot.app/SCScreenshot";
 			};
@@ -905,6 +908,7 @@
 				INFOPLIST_FILE = SCScreenshotExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.aevit.SCScreenshot.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -921,6 +925,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SCScreenshotExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.aevit.SCScreenshot.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -946,6 +951,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.aevit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -967,6 +973,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.aevit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -988,6 +995,7 @@
 				INFOPLIST_FILE = ScreenShotManagerKitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.aevit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCScreenshot.app/SCScreenshot";
 			};
@@ -1003,6 +1011,7 @@
 				INFOPLIST_FILE = ScreenShotManagerKitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.aevit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCScreenshot.app/SCScreenshot";
 			};

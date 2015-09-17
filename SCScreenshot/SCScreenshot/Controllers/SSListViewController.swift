@@ -23,6 +23,7 @@ class SSListViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         self.title = "screenshots"
         self.view.backgroundColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.translucent = false
         
         self.addCollectionView()
         
@@ -52,7 +53,7 @@ class SSListViewController: UIViewController, UICollectionViewDelegate, UICollec
     // MARK: SSImageBrowserDelegate
     func ssImageBrowserDidDeleteAsset(deletedAsset: PHAsset) {
 //        assets()
-        assets.removeAtIndex(find(assets, deletedAsset)!)
+        assets.removeAtIndex(assets.indexOf(deletedAsset)!)
         photoCollectionView?.reloadData()
     }
     

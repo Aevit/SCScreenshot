@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ADEAC88938B6AFA52D412A7C0681DD6EACE1955B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ADEAC88938B6AFA52D412A7C0681DD6EACE1955B" : 0,
+    "7F24053F54268659E0F6F1926826B57367039893" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4258E6B4-A005-4BB0-8A92-76C24E0FEDBB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ADEAC88938B6AFA52D412A7C0681DD6EACE1955B" : "SCScreenshot",
+    "7F24053F54268659E0F6F1926826B57367039893" : "SCImageManagerDemo"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SCScreenshot",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SCScreenshot\/SCScreenshot.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Aevit\/SCImageManager.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7F24053F54268659E0F6F1926826B57367039893"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Aevit\/SCScreenshot.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ADEAC88938B6AFA52D412A7C0681DD6EACE1955B"
+    }
+  ]
+}

@@ -19,7 +19,7 @@ class SSPhotoCell: UICollectionViewCell {
         self.commonInit()
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -34,7 +34,7 @@ class SSPhotoCell: UICollectionViewCell {
         if picBtn != nil {
             return
         }
-        let aBtn: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        let aBtn: UIButton = UIButton(type: UIButtonType.Custom)
         aBtn.frame = self.bounds
         aBtn.userInteractionEnabled = false
         aBtn.imageView!.contentMode = UIViewContentMode.ScaleAspectFill

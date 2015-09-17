@@ -11,7 +11,7 @@ import Photos
 
 public class ScreenshotManager: NSObject, PHPhotoLibraryChangeObserver {
     
-    public func photoLibraryDidChange(changeInstance: PHChange!) {
+    public func photoLibraryDidChange(changeInstance: PHChange) {
         
     }
     
@@ -45,7 +45,6 @@ public class ScreenshotManager: NSObject, PHPhotoLibraryChangeObserver {
         
         
         SCPhotoTool.createCollectionWithTitle(screenshotCollectionTitle, didGetCollectionBlock: { (assetCollection) -> Void in
-            SCTool.log("screenshots collection id: \(assetCollection.localIdentifier)")
             self.addAssetToScreenshotCollection(assetCollection, willShowAssetNum: willShowAssetNum, completeBlock: completeBlock)
         })
     }
@@ -71,10 +70,9 @@ public class ScreenshotManager: NSObject, PHPhotoLibraryChangeObserver {
         // 2. get assets which has not in the screenshots collection
         var shouldChangedAssets: [PHAsset] = []
         var willShowAssets: [PHAsset] = []
-        results.enumerateObjectsUsingBlock({(obj: AnyObject!, idx: Int, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
+        results.enumerateObjectsUsingBlock({(obj: AnyObject, idx: Int, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
             let aAsset: PHAsset = obj as! PHAsset
-            if ((contains(inScreenshotCollectionAssetIds, aAsset.localIdentifier)) == false) {
-                SCTool.log("assetId: \(aAsset.localIdentifier),\n w: \(aAsset.pixelWidth), h: \(aAsset.pixelHeight)\n")
+            if ((inScreenshotCollectionAssetIds.contains(aAsset.localIdentifier)) == false) {
                 shouldChangedAssets.append(aAsset)
             }
             if idx < willShowAssetNum {
@@ -82,17 +80,14 @@ public class ScreenshotManager: NSObject, PHPhotoLibraryChangeObserver {
             }
         })
         
-        SCTool.log("all: \(results.count), screenshots: \(inScreenshotCollectionResult.count), new: \(shouldChangedAssets.count)")
-        
         // 3. save new photos to screenshots
         PHPhotoLibrary.sharedPhotoLibrary().performChanges({ () -> Void in
-            let collectionChangeRequest = PHAssetCollectionChangeRequest(forAssetCollection: assetCollection, assets: nil)
+            let collectionChangeRequest = PHAssetCollectionChangeRequest(forAssetCollection: assetCollection)
             
 //            collectionChangeRequest.removeAssets(results) // for test, only remove from the collection
-            collectionChangeRequest.addAssets(shouldChangedAssets)
+            collectionChangeRequest!.addAssets(shouldChangedAssets)
             
             }, completionHandler: { (success, error) -> Void in
-                SCTool.log("finished add: \(success ? shouldChangedAssets.count: error) photos")
                 if let block = completeBlock {
                     block(changedAssets: shouldChangedAssets, allAssets: allScreenshotAssets, willShowAssets: willShowAssets)
 //                    block(changedAssets: shouldChangedAssets, allNum: inScreenshotCollectionResult.count + shouldChangedAssets.count, willShowAssets: willShowAssets)
